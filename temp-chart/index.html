@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기온과 습도 그래프</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>기온과 습도 데이터 입력</h2>
+
+    <!-- 입력 테이블 -->
+    <table>
+        <tr>
+            <th>월</th>
+            <th>기온 (°C)</th>
+            <th>습도 (%)</th>
+        </tr>
+        <tr>
+            <td>1월</td>
+            <td><input type="number" id="temp1" value="4.5"></td>
+            <td><input type="number" id="humidity1" value="64"></td>
+        </tr>
+        <tr>
+            <td>2월</td>
+            <td><input type="number" id="temp2" value="5.2"></td>
+            <td><input type="number" id="humidity2" value="61"></td>
+        </tr>
+        <tr>
+            <td>3월</td>
+            <td><input type="number" id="temp3" value="8.7"></td>
+            <td><input type="number" id="humidity3" value="59"></td>
+        </tr>
+        <tr>
+            <td>4월</td>
+            <td><input type="number" id="temp4" value="14.4"></td>
+            <td><input type="number" id="humidity4" value="60"></td>
+        </tr>
+        <tr>
+            <td>5월</td>
+            <td><input type="number" id="temp5" value="18.9"></td>
+            <td><input type="number" id="humidity5" value="56"></td>
+        </tr>
+        <tr>
+            <td>6월</td>
+            <td><input type="number" id="temp6" value="22.7"></td>
+            <td><input type="number" id="humidity6" value="54"></td>
+        </tr>
+        <tr>
+            <td>7월</td>
+            <td><input type="number" id="temp7" value="26.4"></td>
+            <td><input type="number" id="humidity7" value="47"></td>
+        </tr>
+        <tr>
+            <td>8월</td>
+            <td><input type="number" id="temp8" value="27.8"></td>
+            <td><input type="number" id="humidity8" value="44"></td>
+        </tr>
+        <tr>
+            <td>9월</td>
+            <td><input type="number" id="temp9" value="24.1"></td>
+            <td><input type="number" id="humidity9" value="55"></td>
+        </tr>
+        <tr>
+            <td>10월</td>
+            <td><input type="number" id="temp10" value="18.1"></td>
+            <td><input type="number" id="humidity10" value="64"></td>
+        </tr>
+        <tr>
+            <td>11월</td>
+            <td><input type="number" id="temp11" value="12.2"></td>
+            <td><input type="number" id="humidity11" value="67"></td>
+        </tr>
+        <tr>
+            <td>12월</td>
+            <td><input type="number" id="temp12" value="7"></td>
+            <td><input type="number" id="humidity12" value="65"></td>
+        </tr>
+    </table>
+
+    <!-- 랜덤 데이터 생성 버튼 -->
+    <button onclick="generateRandomData()">랜덤 데이터 생성</button>
+
+    <!-- 차트를 그릴 캔버스 -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

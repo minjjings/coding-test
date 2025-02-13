@@ -1,0 +1,42 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.0'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.brique'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring Boot 웹 애플리케이션
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// MyBatis Spring Boot 스타터
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
+	// MariaDB 드라이버
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.2'
+
+	// Lombok (선택적)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Spring Boot 테스트
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
